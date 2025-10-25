@@ -1,3 +1,14 @@
 ###
-GET http://localhost:3077/
+GET http://localhost:3077/biblioteca/users
+###
+
+POST http://localhost:3077/biblioteca/users
+Content-Type: application/json
+
+{
+  "name": "Danilu Silva",
+  "birthDate": "2006-04-08",
+  "sex": "Masculino",
+  "adress": "133 Cataguases, Minas Gerais, Brasil"
+}
 ###
