@@ -1,3 +1,7 @@
+// ===================================
+//  ROTAS DE USUÁRIOS ( /biblioteca/users )
+
+
 ###
 GET http://localhost:3077/biblioteca/users
 ###
@@ -12,3 +16,46 @@ Content-Type: application/json
   "adress": "133 Cataguases, Minas Gerais, Brasil"
 }
 ###
+// ===================================
+
+
+
+// ===================================
+//  ROTA DE AUTORES ( /biblioteca/authors )
+###
+
+POST http://localhost:3077/biblioteca/authors
+Content-Type: application/json
+
+{
+  "name": "Carolina Maria de Jesus",
+  "birthDate": "1914-03-14",
+  "sex": "Feminino",
+  "writingGenre": "Novel"
+}
+###
+
+GET http://localhost:3077/biblioteca/authors
+###
+
+// ===================================
+
+
+// ===================================
+//  ROTA DE LIVROS ( /biblioteca/books )
+###
+POST http://localhost:3077/biblioteca/books
+Content-Type: application/json
+
+{
+  "title": "Até que nada mais importe",
+  "synopsis": "POR QUE LEVANTOU ESTA MANHÃ? POR QUE COMEU O QUE COMEU? POR QUE FEZ OU FAZ O QUE FAZ?  QUAL É SEU GRANDE PORQUÊ? Com certeza podemos afirmar que o nosso grande porquê, a razão de nossa existência, é sentirmo-nos vivos indo além dos nossos limites. Estudamos, trabalhamos, nos alimentamos, nos exercitamos e procuramos dar um propósito às nossas vidas, inclusive quando falamos em espiritualidade. Em Até que nada mais importe, o respeitado pastor, autor e palestrante, Luciano Subirá nos apresenta mais que um simples livro de inspiração cristã. Nestas páginas, seremos confrontados pela verdade de que não estamos aqui para viver uma vida efêmera e alucinada, correndo atrás de performances. Estamos indo além dos nossos próprios limites em uma espiritualidade rasa, de longos e inexplicáveis jejuns, lendo a Bíblia repetidas vezes sem entendimento, realizando intermináveis campanhas apenas pelo número, apenas por uma simples meta proposta. Deus não quer ser agradado pelo que fazemos, pelos nossos recordes de jejuns ou leitura bíblica. Ele espera que o busquemos com todo o nosso entendimento, que o amemos de todo o nosso coração, de toda nossa alma até que o nosso relacionamento com ele seja a mais absoluta prioridade, Até que nada mais importe!",
+  "year":"2018",
+  "author": "68fd4c02b53c19a4d5fc8455",
+  "isAvailable": true,
+  "expectedReturnDate":""
+  }
+###
+GET http://localhost:3077/biblioteca/books
+###
+// ===================================

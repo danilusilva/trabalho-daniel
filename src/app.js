@@ -5,6 +5,7 @@ const routes = require('./routes/index.js');
 // Middleware que permite que o servidor entenda requisições com corpo em JSON
 app.use(express.json());
 
+// Usando a rota principal
 app.use('/biblioteca', routes);
 
 // Capturador de rotas não encontradas (404)

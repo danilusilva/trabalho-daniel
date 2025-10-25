@@ -11,7 +11,7 @@ exports.store = async (req, res) => {
     // Tratamento de erros
     if (error.code === 11000) {
       // Erro de duplicidade
-      return res.status(400).json({ error: "Nome de usuário já existe" });
+      return res.status(400).json({ error: "Nome de usuário já cadastrado" });
     }
 
     // Erros mongoose
