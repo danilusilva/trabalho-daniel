@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
 
+// Função para conectar ao MongoDB usando Mongoose
 const conectarMongoDB = async () => {
     try {
         await mongoose.connect(process.env.MONGO_URI);
