@@ -6,7 +6,8 @@ exports.store = async (req, res) => {
         const { name, birthDate, sex, writingGenre } = req.body;
 
         const newAuthor = await Authors.create({ name, birthDate, sex, writingGenre });
-        return res.status(201).json(newAuthor); // Retorna o autor criado com status 201
+        // Retorna o autor criado com status 201
+        return res.status(201).json(newAuthor); 
     } catch (error) {
         // Tratamento de erros
         if (error.code === 11000) {
@@ -34,7 +35,8 @@ exports.store = async (req, res) => {
 exports.index = async (req, res) => {
     try {
         const authors = await Authors.find();
-        return res.status(200).json(authors); // Retorna a lista de autores com status 200
+        // Retorna a lista de autores com status 200
+        return res.status(200).json(authors);
     } catch (error) {
         // Tratamento de erros internos do servidor
         return res.status(500)

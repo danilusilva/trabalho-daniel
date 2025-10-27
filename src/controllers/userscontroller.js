@@ -6,7 +6,8 @@ exports.store = async (req, res) => {
     const { name, birthDate, sex, adress } = req.body;
 
     const newUser = await Users.create({ name, birthDate, sex, adress });
-    return res.status(201).json(newUser); // Retorna o usuário criado com status 201
+    // Retorna o usuário criado com status 201
+    return res.status(201).json(newUser); 
   } catch (error) {
     // Tratamento de erros
     if (error.code === 11000) {
@@ -30,7 +31,8 @@ exports.store = async (req, res) => {
 exports.index = async (req, res) => {
     try {
         const users = await Users.find();
-        return res.status(200).json(users); // Retorna a lista de usuários com status 200
+        // Retorna a lista de usuários com status 200
+        return res.status(200).json(users); 
     } catch (error) {
         // Tratamento de erros internos do servidor
         return res.status(500)
